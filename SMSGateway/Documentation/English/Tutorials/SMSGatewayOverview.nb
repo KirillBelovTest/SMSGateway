@@ -1,0 +1,274 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10417,        266]
+NotebookOptionsPosition[      6305,        188]
+NotebookOutlinePosition[      6724,        204]
+CellTagsIndexPosition[      6681,        201]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["XX", "HistoryData",
+  CellTags->"New",ExpressionUUID->"8eb44e7e-cdd6-4dac-94be-4155dcd604db"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified",ExpressionUUID->"a73ddfc1-3cb0-44c9-9f7f-5b00af50ac5f"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete",ExpressionUUID->"026fca08-f2e5-4f98-8b26-48de8b73d1a3"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised",ExpressionUUID->"432c1772-b35e-4b01-905d-1afe125f4471"]
+}], "History",
+ CellID->1247902091,ExpressionUUID->"b586dba1-8a4d-4b12-8bf4-4a7673a16bf6"],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->1122911449,ExpressionUUID->"c08a0880-c148-4a74-a3d8-4444991218eb"],
+
+Cell["Overview", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->686433507,ExpressionUUID->"88f27f75-8cde-4a2a-bc60-4fe31c3d4dd6"],
+
+Cell["SMSGateway Package", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->605800465,ExpressionUUID->"0c78d27d-ec0d-4f23-81fc-1d1b1cf42643"],
+
+Cell["SMSGateway`", "Categorization",
+ CellLabel->"Context",
+ CellID->468444828,ExpressionUUID->"3b35f0e9-4764-45f1-a918-0b85e473c1a0"],
+
+Cell["SMSGateway/tutorial/SMSGatewayOverview", "Categorization",
+ CellLabel->"URI",ExpressionUUID->"aeb7d4c3-6d48-4fc6-afef-2dc13ea482f2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Synonyms", "SynonymsSection",
+ CellID->1427418553,ExpressionUUID->"16921f92-1cdd-40df-8463-736187be958b"],
+
+Cell["XXXX", "Synonyms",
+ CellID->1251652828,ExpressionUUID->"597de77e-3c8e-49d5-b147-e038d09b48e9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->1427428552,ExpressionUUID->"09f78049-7cb0-49da-8c7a-3153c3bf6f52"],
+
+Cell["sms", "Keywords",
+ CellChangeTimes->{{3.7445632264032965`*^9, 3.7445632285480833`*^9}},
+ CellID->1251852827,ExpressionUUID->"3853a824-301e-41c7-88ff-7d4d24220929"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",
+ CellID->307771771,ExpressionUUID->"190bac2d-079d-435f-9603-7dafaa647d51"],
+
+Cell["XXXX", "Details",
+ CellLabel->"Lead",
+ CellID->218895918,ExpressionUUID->"e649cf0c-4be6-43c8-8a71-94386fbd097a"],
+
+Cell["Kirill Belov", "Details",
+ CellChangeTimes->{{3.744563241189808*^9, 3.7445632437873316`*^9}},
+ CellLabel->"Developers",
+ CellID->350963985,ExpressionUUID->"53f64ee9-b575-437c-b36d-7181b0a52f1b"],
+
+Cell["Kirill Belov", "Details",
+ CellChangeTimes->{{3.7445632466017*^9, 3.744563250279586*^9}},
+ CellLabel->"Authors",
+ CellID->795871300,ExpressionUUID->"69382290-fb3f-481a-a964-7d45a7450a73"],
+
+Cell["XXXX", "Details",
+ CellLabel->"Feature Name",
+ CellID->199739161,ExpressionUUID->"3bea463d-fad1-4fe7-8297-ef5f1883a8ff"],
+
+Cell["XXXX", "Details",
+ CellLabel->"QA",
+ CellID->40625308,ExpressionUUID->"e42206f5-ac25-4e43-a015-07a342e66bdc"],
+
+Cell["XXXX", "Details",
+ CellLabel->"DA",
+ CellID->357121918,ExpressionUUID->"c511914a-a6c5-4cb5-a771-2543f75caf8b"],
+
+Cell["XXXX", "Details",
+ CellLabel->"Docs",
+ CellID->35949532,ExpressionUUID->"910351e2-59de-4a80-9053-c5d9458a2430"],
+
+Cell["XXXX", "Details",
+ CellLabel->"Features Page Notes",
+ CellID->929432370,ExpressionUUID->"64bf4199-bec2-4490-b4b4-125d48bb39e5"],
+
+Cell["XXXX", "Details",
+ CellLabel->"Comments",
+ CellID->240026365,ExpressionUUID->"2948e7b7-7e18-4900-909e-f7277c63a97d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["SMSGateway Overview", "TOCDocumentTitle",ExpressionUUID->"d99cb8ec-fc35-489f-8c70-a36a1f17b289"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["SMSRu",
+ BaseStyle->"Link",
+ ButtonData->"paclet:SMSGateway/tutorial/SMSRu"]], "TOCChapter",
+ CellID->221831704,ExpressionUUID->"914ab26d-72d0-446e-a2fc-b74187fb53b3"],
+
+Cell[TextData[ButtonBox["SMSRuAuthCheck",
+ BaseStyle->"Link",
+ ButtonData->"paclet:SMSGateway/ref/SMSRuAuthCheck"]], "TOCSection",Expression\
+UUID->"35ac853d-b42c-4a77-aee8-00d57be0136b"],
+
+Cell[TextData[ButtonBox["SMSRuCost",
+ BaseStyle->"Link",
+ ButtonData->"paclet:SMSGateway/ref/SMSRuCost"]], "TOCSection",ExpressionUUID-\
+>"2ae7ebe7-794f-4142-a7b8-05ce897970bd"],
+
+Cell[TextData[ButtonBox["SMSRuMyBalance",
+ BaseStyle->"Link",
+ ButtonData->"paclet:SMSGateway/ref/SMSRuMyBalance"]], "TOCSection",Expression\
+UUID->"53eaf9fb-5c02-4994-8e6e-31dea6255faa"],
+
+Cell[TextData[ButtonBox["SMSRuMyFree",
+ BaseStyle->"Link",
+ ButtonData->"paclet:SMSGateway/ref/SMSRuMyFree"]], "TOCSection",ExpressionUUI\
+D->"58e0a24c-5b78-418c-b21f-e47c317d9711"],
+
+Cell[TextData[ButtonBox["SMSRuMyLimit",
+ BaseStyle->"Link",
+ ButtonData->"paclet:SMSGateway/ref/SMSRuMyLimit"]], "TOCSection",ExpressionUU\
+ID->"c3d4230e-c3b1-4662-aae9-d7ebd1298a18"],
+
+Cell[TextData[ButtonBox["SMSRuMySenders",
+ BaseStyle->"Link",
+ ButtonData->"paclet:SMSGateway/ref/SMSRuMySenders"]], "TOCSection",Expression\
+UUID->"2cc7ba56-9006-4bbb-97e8-f9c68fd613ac"],
+
+Cell[TextData[ButtonBox["SMSRuSend",
+ BaseStyle->"Link",
+ ButtonData->"paclet:SMSGateway/ref/SMSRuSend"]], "TOCSection",ExpressionUUID-\
+>"6cb821f0-3403-4840-9370-ac626a9566a6"],
+
+Cell[TextData[ButtonBox["SMSRuStatus",
+ BaseStyle->"Link",
+ ButtonData->"paclet:SMSGateway/ref/SMSRuStatus"]], "TOCSection",ExpressionUUI\
+D->"3aca5076-4a57-4b5e-83a7-2186e59ff74f"],
+
+Cell[TextData[ButtonBox["SMSRuStoplistAdd",
+ BaseStyle->"Link",
+ ButtonData->"paclet:SMSGateway/ref/SMSRuStoplistAdd"]], "TOCSection",Expressi\
+onUUID->"64e6017f-a786-42d3-92c1-d061d03b70a8"],
+
+Cell[TextData[ButtonBox["SMSRuStoplistDel",
+ BaseStyle->"Link",
+ ButtonData->"paclet:SMSGateway/ref/SMSRuStoplistDel"]], "TOCSection",Expressi\
+onUUID->"a333f2ee-b6be-444e-94e5-e68577144f89"],
+
+Cell[TextData[ButtonBox["SMSRuStoplistGet",
+ BaseStyle->"Link",
+ ButtonData->"paclet:SMSGateway/ref/SMSRuStoplistGet"]], "TOCSection",Expressi\
+onUUID->"afa122d5-8240-48cc-b0a1-a761a1871d8c"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{700, 770},
+WindowMargins->{{Automatic, 169}, {Automatic, 60}},
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "TutorialPageStyles.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 599, 14, 22, "History",ExpressionUUID->"b586dba1-8a4d-4b12-8bf4-4a7673a16bf6",
+ CellID->1247902091],
+Cell[CellGroupData[{
+Cell[1182, 38, 123, 1, 27, "CategorizationSection",ExpressionUUID->"c08a0880-c148-4a74-a3d8-4444991218eb",
+ CellID->1122911449],
+Cell[1308, 41, 136, 2, 31, "Categorization",ExpressionUUID->"88f27f75-8cde-4a2a-bc60-4fe31c3d4dd6",
+ CellID->686433507],
+Cell[1447, 45, 146, 2, 31, "Categorization",ExpressionUUID->"0c78d27d-ec0d-4f23-81fc-1d1b1cf42643",
+ CellID->605800465],
+Cell[1596, 49, 135, 2, 31, "Categorization",ExpressionUUID->"3b35f0e9-4764-45f1-a918-0b85e473c1a0",
+ CellID->468444828],
+Cell[1734, 53, 138, 1, 31, "Categorization",ExpressionUUID->"aeb7d4c3-6d48-4fc6-afef-2dc13ea482f2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[1909, 59, 111, 1, 27, "SynonymsSection",ExpressionUUID->"16921f92-1cdd-40df-8463-736187be958b",
+ CellID->1427418553],
+Cell[2023, 62, 100, 1, 17, "Synonyms",ExpressionUUID->"597de77e-3c8e-49d5-b147-e038d09b48e9",
+ CellID->1251652828]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2160, 68, 111, 1, 27, "KeywordsSection",ExpressionUUID->"09f78049-7cb0-49da-8c7a-3153c3bf6f52",
+ CellID->1427428552],
+Cell[2274, 71, 169, 2, 17, "Keywords",ExpressionUUID->"3853a824-301e-41c7-88ff-7d4d24220929",
+ CellID->1251852827]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2480, 78, 108, 1, 27, "DetailsSection",ExpressionUUID->"190bac2d-079d-435f-9603-7dafaa647d51",
+ CellID->307771771],
+Cell[2591, 81, 118, 2, 31, "Details",ExpressionUUID->"e649cf0c-4be6-43c8-8a71-94386fbd097a",
+ CellID->218895918],
+Cell[2712, 85, 200, 3, 31, "Details",ExpressionUUID->"53f64ee9-b575-437c-b36d-7181b0a52f1b",
+ CellID->350963985],
+Cell[2915, 90, 193, 3, 31, "Details",ExpressionUUID->"69382290-fb3f-481a-a964-7d45a7450a73",
+ CellID->795871300],
+Cell[3111, 95, 126, 2, 31, "Details",ExpressionUUID->"3bea463d-fad1-4fe7-8297-ef5f1883a8ff",
+ CellID->199739161],
+Cell[3240, 99, 115, 2, 31, "Details",ExpressionUUID->"e42206f5-ac25-4e43-a015-07a342e66bdc",
+ CellID->40625308],
+Cell[3358, 103, 116, 2, 31, "Details",ExpressionUUID->"c511914a-a6c5-4cb5-a771-2543f75caf8b",
+ CellID->357121918],
+Cell[3477, 107, 117, 2, 31, "Details",ExpressionUUID->"910351e2-59de-4a80-9053-c5d9458a2430",
+ CellID->35949532],
+Cell[3597, 111, 133, 2, 31, "Details",ExpressionUUID->"64bf4199-bec2-4490-b4b4-125d48bb39e5",
+ CellID->929432370],
+Cell[3733, 115, 122, 2, 31, "Details",ExpressionUUID->"2948e7b7-7e18-4900-909e-f7277c63a97d",
+ CellID->240026365]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3892, 122, 102, 0, 167, "TOCDocumentTitle",ExpressionUUID->"d99cb8ec-fc35-489f-8c70-a36a1f17b289"],
+Cell[CellGroupData[{
+Cell[4019, 126, 192, 3, 45, "TOCChapter",ExpressionUUID->"914ab26d-72d0-446e-a2fc-b74187fb53b3",
+ CellID->221831704],
+Cell[4214, 131, 187, 3, 26, "TOCSection",ExpressionUUID->"35ac853d-b42c-4a77-aee8-00d57be0136b"],
+Cell[4404, 136, 177, 3, 20, "TOCSection",ExpressionUUID->"2ae7ebe7-794f-4142-a7b8-05ce897970bd"],
+Cell[4584, 141, 187, 3, 20, "TOCSection",ExpressionUUID->"53eaf9fb-5c02-4994-8e6e-31dea6255faa"],
+Cell[4774, 146, 181, 3, 20, "TOCSection",ExpressionUUID->"58e0a24c-5b78-418c-b21f-e47c317d9711"],
+Cell[4958, 151, 183, 3, 20, "TOCSection",ExpressionUUID->"c3d4230e-c3b1-4662-aae9-d7ebd1298a18"],
+Cell[5144, 156, 187, 3, 20, "TOCSection",ExpressionUUID->"2cc7ba56-9006-4bbb-97e8-f9c68fd613ac"],
+Cell[5334, 161, 177, 3, 20, "TOCSection",ExpressionUUID->"6cb821f0-3403-4840-9370-ac626a9566a6"],
+Cell[5514, 166, 181, 3, 20, "TOCSection",ExpressionUUID->"3aca5076-4a57-4b5e-83a7-2186e59ff74f"],
+Cell[5698, 171, 191, 3, 20, "TOCSection",ExpressionUUID->"64e6017f-a786-42d3-92c1-d061d03b70a8"],
+Cell[5892, 176, 191, 3, 20, "TOCSection",ExpressionUUID->"a333f2ee-b6be-444e-94e5-e68577144f89"],
+Cell[6086, 181, 191, 3, 20, "TOCSection",ExpressionUUID->"afa122d5-8240-48cc-b0a1-a761a1871d8c"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

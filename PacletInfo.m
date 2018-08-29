@@ -1,6 +1,6 @@
 (* Paclet Info File *)
 
-(* created 2018/08/29*)
+(* created 2018/08/30*)
 
 Paclet[
     Name -> "SMSGateway",
@@ -10,7 +10,7 @@ Paclet[
     Creator -> "Kirill Belov",
     Extensions -> 
         {
-            {"Documentation", Language -> "English"}, 
+            {"Documentation", Language -> "English", MainPage -> "Tutorials/SMSGatewayOverview"}, 
             {"Kernel", Root -> ".", Context -> "SMSGateway`"}
         }
 ]
