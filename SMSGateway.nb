@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      1269,         42]
-NotebookOptionsPosition[       867,         27]
-NotebookOutlinePosition[      1230,         43]
-CellTagsIndexPosition[      1187,         40]
+NotebookDataLength[      1246,         41]
+NotebookOptionsPosition[       844,         26]
+NotebookOutlinePosition[      1207,         42]
+CellTagsIndexPosition[      1164,         39]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -22,11 +22,10 @@ Cell["\:0418\:043d\:0438\:0446\:0438\:0430\:043b\:0438\:0437\:0430\:0446\:0438\
 \:044f", "Text",ExpressionUUID->"f87f18cd-ba74-432e-af53-73da4d16f968"],
 
 Cell[BoxData[
- RowBox[{"Get", "[", "\"\<SMSGateway`\>\"", "]"}]], "Code",
- CellLabel->"In[9]:=",ExpressionUUID->"e4581554-0a2f-4827-bdd2-ae742b636f50"]
+ RowBox[{"Get", "[", "\"\<SMSGateway`\>\"", "]"}]], "Code",ExpressionUUID->"e4581554-0a2f-4827-bdd2-ae742b636f50"]
 },
 WindowSize->Automatic,
-WindowMargins->{{Automatic, 314}, {Automatic, 78}},
+WindowMargins->{{Automatic, 311}, {74, Automatic}},
 TrackCellChangeTimes->False,
 FrontEndVersion->"11.3 for Linux x86 (64-bit) (March 6, 2018)",
 StyleDefinitions->"Default.nb"
@@ -43,7 +42,7 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 151, 1, 35, "Text",ExpressionUUID->"f87f18cd-ba74-432e-af53-73da4d16f968"],
-Cell[712, 23, 151, 2, 53, "Code",ExpressionUUID->"e4581554-0a2f-4827-bdd2-ae742b636f50"]
+Cell[712, 23, 128, 1, 53, "Code",ExpressionUUID->"e4581554-0a2f-4827-bdd2-ae742b636f50"]
 }
 ]
 *)
