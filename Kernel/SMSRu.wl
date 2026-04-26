@@ -1,27 +1,10 @@
 (* ::Package:: *)
 
-
-(* ::Title:: *)
-(*SMSRu*)
-
-
-(* ::Section:: *)
-(*begin package*)
-
-
-BeginPackage["SMSGateway`SMSRu`"]
-
-
-(* ::Section:: *)
-(*clear*)
+BeginPackage["KirillBelov`SMSGateway`SMSRu`"]
 
 
 Unprotect["`*"]
 ClearAll["`*"]
-
-
-(* ::Section:: *)
-(*public names declaration*)
 
 
 SMSRuSend::usage = 
@@ -95,15 +78,7 @@ SMSRuStoplistGet[{login, password}]
 SMSRuStoplistGet[auth, options]"
 
 
-(* ::Section:: *)
-(*begin private context*)
-
-
 Begin["`Private`"]
-
-
-(* ::Section:: *)
-(*internal functions and variables*)
 
 
 authPattern[] := 
@@ -142,9 +117,6 @@ smsruRequest[method: _String | PatternSequence[_String, _String], parmeters: {(_
 	]
 
 
-(* ::Section:: *)
-(*send*)
-
 
 (*https://sms.ru/api/send*)
 
@@ -165,6 +137,8 @@ SyntaxInformation[SMSRuSend] =
 
 
 (*send[auth, to, msg]*)
+
+
 SMSRuSend[auth: authPattern[], to: _String | {__String}, msg_String, options: OptionsPattern[]] := 
 	smsruRequest["send", Join[authParams[auth], {"to" -> StringRiffle[Flatten[{to}], ","], "msg" -> msg}], optionValues[SMSRuSend, Flatten[{options}]]]
 
@@ -173,10 +147,6 @@ SMSRuSend[auth: authPattern[], to: _String | {__String}, msg_String, options: Op
 SMSRuSend[auth: authPattern[], toList: {__String}, msgList: {__String}, options: OptionsPattern[]] /; 
 	Length[toList] === Length[msgList] := 
 	smsruRequest["send", Join[authParams[auth], MapThread["to[" <> #1 <> "]" -> #2&, {toList, msgList}]], optionValues[SMSRuSend, Flatten[{options}]]]
-
-
-(* ::Section:: *)
-(*status*)
 
 
 (*https://sms.ru/api/cost*)
@@ -193,10 +163,6 @@ SyntaxInformation[SMSRuStatus] =
 (*status[auth, smsIDs]*)
 SMSRuStatus[auth: authPattern[], smsID: _String | {__String}, options: OptionsPattern[]] := 
 	smsruRequest["status", Join[authParams[auth], {"sms_id" -> StringRiffle[Flatten[{smsID}], ","]}], optionValues[SMSRuStatus, Flatten[{options}]]]
-
-
-(* ::Section:: *)
-(*cost*)
 
 
 (*https://sms.ru/api/cost*)
@@ -217,6 +183,8 @@ SyntaxInformation[SMSRuCost] =
 
 
 (*cost[auth, to, msg]*)
+
+
 SMSRuCost[auth: authPattern[], to: _String | {__String}, msg_String, options: OptionsPattern[]] := 
 	smsruRequest["cost", Join[authParams[auth], {"to" -> StringRiffle[Flatten[{to}], ","], "msg" -> msg}], optionValues[SMSRuCost, Flatten[{options}]]]
 
@@ -225,10 +193,6 @@ SMSRuCost[auth: authPattern[], to: _String | {__String}, msg_String, options: Op
 SMSRuCost[auth: authPattern[], toList: {__String}, msgList: {__String}, options: OptionsPattern[]] /; 
 	Length[toList] === Length[msgList] := 
 	smsruRequest["cost", Join[authParams[auth], MapThread["to[" <> #1 <> "]" -> #2&, {toList, msgList}]], optionValues[SMSRuCost, Flatten[{options}]]]
-
-
-(* ::Section:: *)
-(*mybalance*)
 
 
 (*https://sms.ru/api/balance*)
@@ -243,12 +207,10 @@ SyntaxInformation[SMSRuMyBalance] =
 
 
 (*mybalance[auth]*)
+
+
 SMSRuMyBalance[auth: authPattern[], options: OptionsPattern[]] := 
 	smsruRequest["my", "balance", authParams[auth], optionValues[SMSRuMyBalance, Flatten[{options}]]]
-
-
-(* ::Section:: *)
-(*mylimit*)
 
 
 (*https://sms.ru/api/limit*)
@@ -267,10 +229,6 @@ SMSRuMyLimit[auth: authPattern[], options: OptionsPattern[]] :=
 	smsruRequest["my", "limit", authParams[auth], optionValues[SMSRuMyLimit, Flatten[{options}]]]
 
 
-(* ::Section:: *)
-(*myfree*)
-
-
 (*https://sms.ru/api/my_free*)
 
 
@@ -285,10 +243,6 @@ SyntaxInformation[SMSRuMyFree] =
 (*myfree[auth]*)
 SMSRuMyFree[auth: authPattern[], options: OptionsPattern[]] := 
 	smsruRequest["my", "free", authParams[auth], optionValues[SMSRuMyFree, Flatten[{options}]]]
-
-
-(* ::Section:: *)
-(*mysenders*)
 
 
 (*https://sms.ru/api/senders*)
@@ -307,10 +261,6 @@ SMSRuMySenders[auth: authPattern[], options: OptionsPattern[]] :=
 	smsruRequest["my", "senders", authParams[auth], optionValues[SMSRuMySenders, Flatten[{options}]]]
 
 
-(* ::Section:: *)
-(*authcheck*)
-
-
 (*https://sms.ru/api/auth_check*)
 
 
@@ -325,10 +275,6 @@ SyntaxInformation[SMSRuAuthCheck] =
 (*authcheck[auth]*)
 SMSRuAuthCheck[auth: authPattern[], options: OptionsPattern[]] := 
 	smsruRequest["auth", "check", authParams[auth], optionValues[SMSRuAuthCheck, Flatten[{options}]]]
-
-
-(* ::Section:: *)
-(*stoplistadd*)
 
 
 (*https://sms.ru/api/stoplist_add*)
@@ -347,10 +293,6 @@ SMSRuStoplistAdd[auth: authPattern[], phone_String, text_String, options: Option
 	smsruRequest["stoplist", "add", Join[authParams[auth], {"stoplist_phone" -> phone, "stoplist_text" -> text}], optionValues[SMSRuStoplistAdd, Flatten[{options}]]]
 
 
-(* ::Section:: *)
-(*stoplistdel*)
-
-
 (*https://sms.ru/api/stoplist_del*)
 
 
@@ -363,12 +305,10 @@ SyntaxInformation[SMSRuStoplistDel] =
 
 
 (*stoplistdel[auth, phone]*)
+
+
 SMSRuStoplistDel[auth: authPattern[], phone_String, options: OptionsPattern[]] := 
 	smsruRequest["stoplist", "del", Join[authParams[auth], {"stoplist_phone" -> phone}], optionValues[SMSRuStoplistDel, Flatten[{options}]]]
-
-
-(* ::Section:: *)
-(*stoplistget*)
 
 
 (*https://sms.ru/api/stoplist_get*)
@@ -387,22 +327,10 @@ SMSRuStoplistGet[auth: authPattern[], options: OptionsPattern[]] :=
 	smsruRequest["stoplist", "get", authParams[auth], optionValues[SMSRuStoplistGet, Flatten[{options}]]]
 
 
-(* ::Section:: *)
-(*end private context*)
-
-
 End[]
 
 
-(* ::Section:: *)
-(*from change protection*)
-
-
 Protect["`*"]
-
-
-(* ::Section:: *)
-(*end package*)
 
 
 EndPackage[]

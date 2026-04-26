@@ -1,8 +1,0 @@
-Resources[
-    Version[1],
-    ExecutionBuildCommand["<<SMSGateway`"],
-    Paclet[
-        PacletFolder["SMSGateway"],
-        FunctionPaclet[False]
-    ]
-]
